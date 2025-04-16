@@ -28,9 +28,16 @@ export class FixedNumber {
 
         // there are multiple cases to follow through: ±a±bi, ±a, and ±bi
         if (input.includes('i')) {
-            
-        } else {
 
+        } else {
+            // ±a
+            if (input.includes('.')) {
+                const tpart = input.split('.');
+                const { int, dec } = { int: BigInt(tpart[0]), dec: BigInt(tpart[1]) };
+                
+            } else {
+
+            }
         }
     }
 
